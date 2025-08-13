@@ -1,0 +1,100 @@
+/* 🌐 Importing a clean monospace font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+/* 🔲 Global styles */
+body {
+    background: linear-gradient(to right, #f1f5f9, #e2e8f0); /* Light blue-gray gradient */
+    font-family: 'Fira Code', monospace;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🧱 Card styles for container */
+.card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+/* 👨‍🏫 Style for the paragraph shown to the user */
+#text-passage {
+    background: #f8f9fa;
+    padding: 1.2rem 1.5rem;
+    border-radius: 0.75rem;
+    min-height: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    user-select: none;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease;
+}
+
+/* ⌨️ Typing area */
+#typing-area {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    resize: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s;
+}
+
+#typing-area:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.2);
+    outline: none;
+}
+
+/* ✅ Green highlight for correct characters */
+.highlight-correct {
+    color: #198754;
+    background-color: #d1e7dd;
+    border-radius: 4px;
+    padding: 0 1px;
+}
+
+/* ❌ Red highlight for incorrect characters */
+.highlight-error {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border-radius: 4px;
+    padding: 0 1px;
+}
+
+/* 📊 Result section */
+#result {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background-color: #e7f1ff;
+    border: 1px solid #b6d4fe;
+    color: #084298;
+    transition: all 0.3s ease;
+}
+
+/* 🎛️ Reset button styling */
+#reset-btn {
+    background-color: #0d6efd;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#reset-btn:hover {
+    background-color: #0b5ed7;
+}
+
+/* 📱 Responsive typography */
+@media (max-width: 576px) {
+    #text-passage, #typing-area {
+        font-size: 1rem;
+    }
+}
